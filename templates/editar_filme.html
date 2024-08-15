@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/css/estilo.css">
+</head>
+<body>
+        <section>
+            <h1>Adicionar Filme</h1>
+
+            <div>
+                <form action="/editar_filme/{{ filme[0] }}" method="POST">
+                    <!-- # Código[0], nome[1], espécie[2], raça[3], peso[4], email[5], nome-tutor[6]
+                    # e telefone de contato [7]. -->
+                    <div>
+                        <label for="nome">Nome: </label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+
+                    <div>
+                        <label for="genero">genero do filme </label>
+                        <select id="genero" name="genero">
+                            <option value="Comedia">Comedia</option>
+                            <option value="Terror">Terror</option>
+                            <option value="Suspense">Suspense</option>
+                            <option value="Animacao">Animação</option>
+                            <option value="Acao">Ação</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="diretor">Diretor ou Estudio </label>
+                        <input type="text" id="diretor" name="diretor">
+                    </div>
+
+                    <div>
+                        <label for="ano">Ano da estreia: </label>
+                        <input max = 2025 type="number" id="ano" name="ano"><br>
+                    </div>
+
+                    <div>
+                        <button type="submit">ADICIONAR</button>
+                    </div>
+                </form>
+
+            </div>
+        </section>
+</body>
+</html>

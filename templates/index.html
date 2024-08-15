@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de filmes</title>
+    <link rel="stylesheet" href="../static/css/estilo.css">
+</head>
+<body>
+    <header class="fundo-preto">
+        <h1>Veja seus filmes aqui</h1>
+    </header>
+    <main class="imagem-fundo">
+
+        <section>
+
+            <p>Lista de filmes</p>
+
+            {% for filme in filmes %}
+            <div>
+                <div>
+                    <br>
+                    <div>
+
+                        <p>{{ filme[1] }}</p>
+                        <br>
+                        <p>Nome do filme: {{ filme[1] }} </p>
+                        <p>Genero: {{ filme[2] }}</p>
+                        <p>Diretor: {{ filme[3] }} </p>
+                        <p>Ano: {{ filme[4] }} </p>
+                        <br>
+                    </div>
+                    <div>
+                        <a href="/editar_filme/{{ loop.index0 }}"><button>Editar</button></a>
+
+                        <a href="/cancelar_filme/{{ loop.index0 }}"><button>Excluir Filme</button></a>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            {% endfor %}
+
+            <a href="/adicionar_filme"><button>Adicionar filme</button></a>
+            <!-- Botão de editar aqui-->
+        </section>
+    </main>
+</body>
+</html>

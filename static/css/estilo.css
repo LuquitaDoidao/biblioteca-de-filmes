@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: all 0.3s;
+
+:root{
+    --branco: #F4F4F5;
+    --cinza-texto: #A1A1AA;
+    --cinza-claro: #323238;
+    --cinza-escuro: #212121;
+    --preto: #000000;
+}
+
+.imagem-fundo{
+    background-image: url(../img/fundo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    width: 100%;
+    height: 700px;
+}
+
+.fundo-preto{
+    background-color: #000000
+}
