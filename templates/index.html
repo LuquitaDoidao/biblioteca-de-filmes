@@ -7,41 +7,43 @@
 </head>
 <body>
     <header class="fundo-preto">
-        <h1>Veja seus filmes aqui</h1>
+        <h1></h1>
     </header>
     <main class="imagem-fundo">
+            <section class="centraliza">
 
-        <section>
+                <p class="cor espaco-cima letra"> Veja Sua Lista de Filmes</p>
+    
 
-            <p>Lista de filmes</p>
-
-            {% for filme in filmes %}
-            <div>
-                <div>
-                    <br>
-                    <div>
-
-                        <p>{{ filme[1] }}</p>
-                        <br>
-                        <p>Nome do filme: {{ filme[1] }} </p>
-                        <p>Genero: {{ filme[2] }}</p>
-                        <p>Diretor: {{ filme[3] }} </p>
-                        <p>Ano: {{ filme[4] }} </p>
-                        <br>
+                <div class=" espaco-cima">
+                    {% for filme in filmes %}
+                    <div class="quadro_filme">
+                        <div>
+                            <br>
+                            <div class="cor texto">
+    
+                                <p class="nome">{{ filme[1] }}</p>
+                                <br>
+                                <p><span class="negrito">Nome do filme:</span> {{ filme[1] }} </p>
+                                <p><span class="negrito">Genero:</span> {{ filme[2] }}</p>
+                                <p><span class="negrito">Diretor:</span> {{ filme[3] }} </p>
+                                <p><span class="negrito">Ano:</span> {{ filme[4] }} </p>
+                                <br>
+                            </div>
+                            <div cass="boato">
+                             <a href="/editar_filme/{{ loop.index0 }}"><button class="boato editar">Editar</button></a>
+    
+                             <a href="/cancelar_filme/{{ loop.index0 }}"><button class="boato deletar">Deletar</button></a>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <a href="/editar_filme/{{ loop.index0 }}"><button>Editar</button></a>
-
-                        <a href="/cancelar_filme/{{ loop.index0 }}"><button>Excluir Filme</button></a>
-                    </div>
+                    <br><br>
+                    {% endfor %}
                 </div>
-            </div>
-            <br><br>
-            {% endfor %}
-
-            <a href="/adicionar_filme"><button>Adicionar filme</button></a>
-            <!-- Botão de editar aqui-->
-        </section>
+    
+                <a href="/adicionar_filme"><button class="adicionar">Adicionar filme</button></a>
+                <!-- Botão de editar aqui-->
+            </section>
     </main>
 </body>
 </html>

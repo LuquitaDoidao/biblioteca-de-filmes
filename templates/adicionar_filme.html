@@ -1,50 +1,73 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Adicionar</title>
+    <title>adicione filmes</title>
     <link rel="stylesheet" href="../static/css/estilo.css">
 </head>
 <body>
-        <section>
-            <h1>Adicionar Filme</h1>
+    <header class="fundo-preto">
+    </header>
+    <main class="imagem-fundo">
+            <section class="centraliza">
 
-            <div>
-                <form action="/adicionar_filme" method="POST">
-                    <!-- # Código[0], nome[1], espécie[2], raça[3], peso[4], email[5], nome-tutor[6]
-                    # e telefone de contato [7]. -->
-                    <div>
-                        <label for="nome">Nome: </label>
-                        <input type="text" id="nome" name="nome" required>
+                <p class="cor espaco-cima letra"> Adicione um Filme</p>
+    
+
+                <div class=" espaco-cima">
+                    <div class="quadro_filme">
+                        <div>
+                            <br>
+                            <div class="cor texto">
+
+                                <form action="/adicionar_filme" method="POST">
+                                    <!-- # Código[0], nome[1], espécie[2], raça[3], peso[4], email[5], nome-tutor[6]
+                                    # e telefone de contato [7]. -->
+                                    <div>
+                                        <label for="nome">Nome: </label>
+                                        <input type="text" id="nome" name="nome" required>
+                                    </div>
+                
+                                    <div>
+                                        <label for="genero">genero do filme </label>
+                                        <select id="genero" name="genero">
+                                            <option value="Comedia">Comedia</option>
+                                            <option value="Terror">Terror</option>
+                                            <option value="Suspense">Suspense</option>
+                                            <option value="Animacao">Animação</option>
+                                            <option value="Documentario">Documentario</option>
+                                            <option value="Acao">Ação</option>
+                                            <option value="Aventura">Aventura</option>
+                                            <option value="Drama">Drama</option>
+                                            <option value="Romance">Romance</option>
+                                            <option value="Ficcao-cientifica">Ficção Cientifica</option>
+                                            <option value="Adulto">Adulto</option>
+                                            <option value="Infantil">Infantil</option>
+                                            <option value="Musical">Musical</option>
+                                            <option value="Fantasia">Fantasia</option>
+                                        </select>
+                                    </div>
+                
+                                    <div>
+                                        <label for="diretor">Diretor ou Estudio </label>
+                                        <input type="text" id="diretor" name="diretor">
+                                    </div>
+                
+                                    <div>
+                                        <label for="ano">Ano da estreia: </label>
+                                        <input max = 2025 type="number" id="ano" name="ano"><br>
+                                    </div>
+                
+                                    <div>
+                                        <button type="submit" class="boato adicionar2">ADICIONAR</button>
+                                    </div>
+                                    
+                                </form>
+                            </div>
+                        </div>
                     </div>
-
-                    <div>
-                        <label for="genero">genero do filme </label>
-                        <select id="genero" name="genero">
-                            <option value="Comedia">Comedia</option>
-                            <option value="Terror">Terror</option>
-                            <option value="Suspense">Suspense</option>
-                            <option value="Animacao">Animação</option>
-                            <option value="Acao">Ação</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label for="diretor">Diretor ou Estudio </label>
-                        <input type="text" id="diretor" name="diretor">
-                    </div>
-
-                    <div>
-                        <label for="ano">Ano da estreia: </label>
-                        <input max = 2025 type="number" id="ano" name="ano"><br>
-                    </div>
-
-                    <div>
-                        <button type="submit">ADICIONAR</button>
-                    </div>
-                </form>
-
-            </div>
-        </section>
+                </div>
+            </section>
+    </main>
 </body>
 </html>
